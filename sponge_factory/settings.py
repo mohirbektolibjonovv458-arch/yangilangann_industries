@@ -19,11 +19,11 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-CHANGE-THIS-KEY-IN-PR
 
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS',
-    default='127.0.0.1,localhost,sponge-industries.up.railway.app',
-    cast=Csv()
-)
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "sponge-industries.up.railway.app",
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://sponge-industries.up.railway.app",
